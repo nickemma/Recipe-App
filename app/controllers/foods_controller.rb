@@ -13,8 +13,8 @@ class FoodsController < ApplicationController
   def create
     food = Food.new(food_params)
     food.user = current_user
-     respond_to do |format|
-      format.html do 
+    respond_to do |format|
+      format.html do
         if food.save
           flash[:notice] = 'Food was saved successfully.'
           redirect_to foods_path
