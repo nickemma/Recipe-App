@@ -3,7 +3,6 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
-    # @foods = @user.foods.order(:created_at :desc)
   end
 
   def new
