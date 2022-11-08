@@ -10,8 +10,6 @@ class FoodsController < ApplicationController
   end
 
   def create
-    # food = Food.new(food_params)
-    # food.user = current_user
     food = current_user.foods.new(food_params)
     respond_to do |format|
       format.html do

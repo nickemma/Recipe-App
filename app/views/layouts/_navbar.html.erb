@@ -1,11 +1,14 @@
 <nav class="navbar">
   <div class='nav-link'>
     <%= form_with url: root_path, method: :get do %>
-      <button class='logo'>Recipe App</button>
+      <button class='logo'>Lazy</button>
     <% end %>
     <% if current_user%>
       <%= form_with url: foods_path, method: :get do %>
         <button class='list'>Foods</button>
+      <% end %>
+      <%= form_with url: recipes_path, method: :get do %>
+        <button class='list'>Recipes</button>
       <% end %>
     <% end %>
   </div>
