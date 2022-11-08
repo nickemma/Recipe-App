@@ -123,14 +123,6 @@ h2 {
   cursor: pointer;
 }
 
-.actions input:hover {
-  background: coral;
-  border: none;
-  color: #fff;
-  transition: 0.5s ease-in-out;
-  transform: rotate(360deg);
-}
-
 .set {
   text-align: center;
   display: flex;
@@ -285,6 +277,14 @@ h2 {
   transition: 0.5s ease-in-out;
 }
 
+.done h4 a {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #222;
+  text-transform: capitalize;
+}
+
 .recipe .get a {
   text-decoration: none;
   color: #fff;
@@ -330,7 +330,14 @@ textarea {
   padding: 1rem 1rem;
   cursor: pointer;
   margin-bottom: 2rem;
-  cursor: pointer;
+}
+
+.actions input:hover {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: rotate(360deg);
 }
 
 .done {
@@ -338,14 +345,6 @@ textarea {
   width: 100%;
   max-width: 50%;
   padding: 1rem 1.5rem;
-}
-
-.done h4 a {
-  font-size: 2rem;
-  font-weight: bolder;
-  margin-bottom: 1rem;
-  color: #222;
-  text-transform: capitalize;
 }
 
 .done p {
