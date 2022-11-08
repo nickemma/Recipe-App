@@ -182,9 +182,22 @@ h2 {
   padding: 1rem 2rem;
 }
 
+.table thead th,
+.table tbody td {
+  border-bottom: 1px solid gainsboro;
+}
+
 .table thead th {
   padding: 1rem 0;
   font-size: 1.5rem;
+  font-weight: bolder;
+  border-right: 1px solid gainsboro;
+}
+
+.table tbody td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
   font-weight: bolder;
   border-right: 1px solid gainsboro;
 }

@@ -3,7 +3,7 @@
     <%= form_with url: root_path, method: :get do %>
       <button class='logo'>Recipe App</button>
     <% end %>
-    <% if current_user.present? %>
+    <% if current_user%>
       <%= form_with url: foods_path, method: :get do %>
         <button class='list'>Foods</button>
       <% end %>
