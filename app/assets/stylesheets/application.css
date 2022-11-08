@@ -1,15 +1,263 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  font-size: 62.5%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(252, 247, 247);
+  z-index: 100;
+  padding: 2rem 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link .list {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.navbar .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.log button {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.log:hover button {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: translateY(-0.5rem);
+}
+
+h2 {
+  margin-top: 10rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.new_user {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 50rem;
+  padding: 2rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  width: 20%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.actions input:hover {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.set {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.sign-out {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.alert {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ========= Food ========  */
+
+.food-section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.table {
+  table-layout: fixed;
+  width: 80%;
+  margin: 3rem auto;
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.table thead th,
+.table tbody td {
+  border-bottom: 1px solid gainsboro;
+}
+
+.table thead th {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  border-right: 1px solid gainsboro;
+}
+
+.table tbody td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bolder;
+  border-right: 1px solid gainsboro;
+}
+
+.btn-div .btn-add {
+  font-size: 2rem;
+  margin-left: 80rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 3rem;
+  text-align: left;
+}
+
+.btn-div .btn-add:hover {
+  background: rgb(102, 102, 245);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.formed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.form-div .form-control {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-create {
+  font-size: 2rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.btn-create:hover {
+  background: rgb(102, 102, 245);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-back {
+  font-size: 2rem;
+  color: #6d7ae7;
+  padding: 1rem 3rem;
+  text-decoration: underline;
+}
