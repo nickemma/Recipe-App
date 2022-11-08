@@ -61,11 +61,10 @@ header {
 }
 
 .log button {
-  padding-left: 2rem;
   border-radius: 0.5rem;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   margin-right: 1rem;
   font-size: 2rem;
   cursor: pointer;

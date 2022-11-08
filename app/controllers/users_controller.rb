@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
-  
+
   def sign_out
     sign_out_and_redirect(current_user)
   end
