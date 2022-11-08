@@ -13,17 +13,14 @@ class Recipe < ApplicationRecord
   validates :user_id, presence: true
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%") 
+    where('name LIKE ?', "%#{search}%")
   end
 
   def self.search_by_ingredients(search)
-    where("ingredients LIKE ?", "%#{search}%") 
+    where('ingredients LIKE ?', "%#{search}%")
   end
 
   def self.search_by_method(search)
-    where("method LIKE ?", "%#{search}%") 
+    where('method LIKE ?', "%#{search}%")
   end
 end
-
-
-
