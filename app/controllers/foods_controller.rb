@@ -6,13 +6,13 @@ class FoodsController < ApplicationController
   end
 
   def new
-    @user = current_user
     @food = Food.new
   end
 
   def create
-    food = Food.new(food_params)
-    food.user = current_user
+    # food = Food.new(food_params)
+    # food.user = current_user
+    food = current_user.foods.new(food_params)
     respond_to do |format|
       format.html do
         if food.save
@@ -39,6 +39,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:foods).permit(:name, :measurement_unit, :price)
+    params.require(:food).permit(:name, :quantity, :measurement_unit, :price)
   end
 end
