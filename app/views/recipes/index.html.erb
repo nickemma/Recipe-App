@@ -1,0 +1,8 @@
+<div class='recipe'> 
+<%= link_to "Add Recipe", new_recipe_path %>
+<% @recipes.each do |recipe| %>
+  <p><%= link_to recipe.name, recipe_path(recipe) %></p>
+  <p><%= recipe.description %></p>
+  <%= button_to "Delete", recipe_path(recipe.id),data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, method: :delete %>
+<% end %>
+</div>
