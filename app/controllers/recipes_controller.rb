@@ -11,8 +11,16 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  def public
-    @recipe = Recipe.where(public: true)
+    def public
+    @totals = {}
+    @public_recipes = Recipe.where(public: true).order('created_at DESC')
+    @public_recipes.each do |pub|
+      total = 0
+      RecipeFood.where(recipe_id: pub.id).each do |rec_food|
+        total += rec_food.quantity * rec_food.food.price
+      end
+      @totals[pub.name] = total
+    end
   end
 
   def create
