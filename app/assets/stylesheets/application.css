@@ -343,7 +343,7 @@ textarea {
 .done {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 50%;
+  max-width: 80%;
   padding: 1rem 1.5rem;
 }
 
@@ -358,4 +358,10 @@ textarea {
   background: #6d7ae7;
   padding: 0.5rem 1rem;
   color: #fff;
+}
+
+/* ====== Recipe Details =======  */
+
+.next {
+  margin: 10rem;
 }

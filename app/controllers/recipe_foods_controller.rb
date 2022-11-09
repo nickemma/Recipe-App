@@ -1,4 +1,4 @@
-class RecipFoodsController < ApplicationController
+class RecipeFoodsController < ApplicationController
   def new
     @recipe = Recipe.find(params[:recipe_id])
     unless @recipe.user == current_user

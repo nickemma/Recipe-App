@@ -1,18 +1,53 @@
-<div class='next'>
-<ul> 
-<li><%= @recipe.name %></li>
-<li><%= @recipe.preparation_time %></li>
-<li><%= @recipe.cooking_time %></li>
-<li><%= @recipe.description %></li>
-</ul>
-<% if @recipe.user == current_user %>
-  <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %>
-<% end %>
+<div class="recipe-detail">
+<h1><%= @recipe.name %></h1>
+<div>
+<div class="detals">
+  <div class="time">
+    <p>Preparation time: </p>
+    <span><%=@recipe.preparation_time %></span>
+  </div>
+  <div class="time">
+    <p>Cooking time: </p>
+    <span><%=@recipe.cooking_time %></span>
+  </div>
 
-<% @recipe_foods.each do |recipe_food| %>
-  <p><%= recipe_food.food.name %></p>
-  <p><%= recipe_food.quantity %></p>
-  <p><%= recipe_food.quantity * recipe_food.food.price %></p>
-  <%= button_to 'Remove', recipe_recipe_food_path(@recipe, recipe_food), data: {turbo_confirm: 'are you sure'}, method: :delete %>
-<% end %>
+  <div>
+    <p><%= @recipe.description %></p>
+  </div>
+
+  <div class="shop-list">
+    <div class="shopping-list">
+      <%= link_to 'Generate shopping list', recipes_path, class: 'btn-shopping' %>
+    </div>
+     <div class="add-ingredient">
+      <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn-ing' %>
+    </div>
+  </div>
+</div>
+
+
+<table>
+ <% if @recipe.recipe_foods.any? %>
+    <thead>
+        <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @recipe.recipe_foods.each do |food|%>
+    <tr>
+      <td><%= food.food.name%></th>
+      <td><%= food.quantity%></td>
+      <td><%= food.quantity * food.food.price %></td>
+      <td>
+        <%=link_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), data: {turbo_confirm: 'are you sure'}, method: :delete, class:"btn btn-outline-dark"%>
+      </td>
+    </tr>
+    <%end%>
+    </tbody>
+  <%end%>
+</table>
 </div>
