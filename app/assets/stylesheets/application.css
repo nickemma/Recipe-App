@@ -159,12 +159,6 @@ h2 {
   align-items: center;
 }
 
-.heading {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
 .table {
   table-layout: fixed;
   width: 100%;
@@ -265,6 +259,12 @@ h2 {
 .recipe {
   margin-top: 10rem;
   padding-left: 10rem;
+}
+
+.play a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #333;
 }
 
 .recipe .get {
@@ -503,12 +503,6 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-}
-
-.play a {
-  font-size: 2rem;
-  font-weight: bolder;
-  color: #333;
 }
 
 .play span {
