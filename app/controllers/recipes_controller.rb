@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-    def public
+  def public
     @totals = {}
     @public_recipes = Recipe.where(public: true).order('created_at DESC')
     @public_recipes.each do |pub|
