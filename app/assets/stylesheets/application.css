@@ -332,6 +332,17 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.new-label input {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  cursor: pointer;
+}
+
 .actions input:hover {
   background: coral;
   border: none;
@@ -343,7 +354,7 @@ textarea {
 .done {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 50%;
+  max-width: 80%;
   padding: 1rem 1.5rem;
 }
 
@@ -357,5 +368,118 @@ textarea {
   font-size: 1.5rem;
   background: #6d7ae7;
   padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+/* ====== Recipe Details =======  */
+
+.recipe-detail {
+  margin: 8rem 25%;
+}
+
+.recipe-detail h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.details .form-check {
+  text-align: end;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.details .time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.time p {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+
+.time span {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.details .res {
+  background: gainsboro;
+  font-size: 2rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.details .shop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.shop-list .check-list {
+  border: 1px solid gainsboro;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+
+.shop-list .check-list a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.shop-list .check-list:hover {
+  background: gainsboro;
+}
+
+.details hr {
+  border: 1px solid;
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+
+/* ========= Ingrdient =======  */
+
+.add-ing {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.new-label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label select {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  cursor: pointer;
+}
+
+.go-back {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: underline;
   color: #fff;
 }

@@ -1,0 +1,64 @@
+<div class="recipe-detail">
+<h2><%= @recipe.name %></h2>
+<div>
+<div class="details">
+    <div class="form-check">
+      <% if @recipe.public == false %>
+        <%= check_box :public, checked: false  %>
+        <label class="check-label" for="unchecked">Public</label>
+      <% else %>
+        <%= check_box :public, checked: true %>
+        <label class="check-label" for="checked">Public</label>
+      <%end%>
+    </div>
+
+  <div class="time">
+    <p>Preparation time: </p>
+    <span><%=@recipe.preparation_time %></span>
+  </div>
+  <div class="time">
+    <p>Cooking time: </p>
+    <span><%=@recipe.cooking_time %></span>
+  </div>
+
+  <div class='res'>
+    <p><%= @recipe.description %></p>
+  </div>
+
+  <div class="shop-list">
+    <div class="check-list">
+      <%= link_to 'Generate shopping list', recipes_path %>
+    </div>
+     <div class="check-list">
+      <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe) %>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<table>
+ <% if @recipe.recipe_foods.any? %>
+    <thead>
+        <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @recipe.recipe_foods.each do |food|%>
+    <tr>
+      <td><%= food.food.name%></th>
+      <td><%= food.quantity%></td>
+      <td><%= food.quantity * food.food.price %></td>
+      <td>
+        <%=link_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), data: {turbo_confirm: 'are you sure'}, method: :delete, class:"btn btn-outline-dark"%>
+      </td>
+    </tr>
+    <%end%>
+    </tbody>
+  <%end%>
+</table>
+</div>
