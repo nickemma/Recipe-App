@@ -6,6 +6,7 @@
   border: none;
   text-decoration: none;
   transition: all 400ms ease;
+  list-style: none;
 }
 
 html {
@@ -166,11 +167,16 @@ h2 {
 
 .table {
   table-layout: fixed;
-  width: 80%;
+  width: 100%;
   margin: 3rem auto;
   border: 1px solid gainsboro;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
+}
+
+.tab {
+  width: 80%;
+  border-collapse: collapse;
 }
 
 .table thead th,
@@ -482,4 +488,55 @@ textarea {
   border-radius: 0.5rem;
   text-decoration: underline;
   color: #fff;
+}
+
+/* ========= Public  ========  */
+
+.total {
+  margin: 10rem 25%;
+}
+
+.link {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.play a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #333;
+}
+
+.play span {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(58, 58, 58);
+}
+
+.nice {
+  margin: 10rem 25%;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nice .awesome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.awesome .rest span {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #333;
 }

@@ -1,31 +1,35 @@
-<div class="flex justify-center min-h-screen bg-gray-900 text-center p-8">
-  <div class="w-[80%]">
-    <p class="font-bold text-xl text-white">Shopping List</p>
-    <div class="flex flex-wrap justify-around my-4">
-      <div><span class="text-white font-bold">Amount of food items to buy: </span><span class="font-bold text-white">&nbsp;<%= @foods.length %></span></div>
-      <div><span class="text-white font-bold">Total value of food needed:</span><span class="font-bold text-white">&nbsp;<%= @total %></span></div>
+<div class="nice">
+    <h3 class="heading">Shopping List</h3>
+    <div class="awesome">
+      <div class='rest'>
+      <span>Amount of food items to buy: </span>
+      <span>&nbsp;<%= @foods.length %></span>
+      </div>
+
+      <div class='rest'>
+      <span>Total value of food needed:</span>
+      <span>&nbsp;<%= @total %></span>
+      </div>
     </div>
-    <table class="w-full text-lg table-auto border-collapse">
+
+    <table class="table">
       <thead>
         <tr>
-          <th class="border border-slate-800 py-2 text-white">Food</th>
-          <th class="border border-slate-800 text-white">Quantity</th>
-          <th class="border border-slate-800 w-44 text-white">Measurement Unit</th>
-          <th class="border border-slate-800 text-white">Unit Price</th>
-          <th class="border border-slate-800 text-white">Action</th>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Price</th>
         </tr>
       </thead>
       <tbody>
         <% @foods.each do |food| %>
-          <tr class="odd:bg-white even:bg-gray-900 even:text-white">
-            <td class="border border-slate-300 py-2"><%= food.name %></td>
-             <td class="border border-slate-300"><%= food.quantity %></td>
-            <td class="border border-slate-300"><%= food.measurement_unit %></td>
-            <td class="border border-slate-300">$<%= food.price %></td>
-            <td class="border border-slate-300"><%= button_to "Delete", food_path(food.id), method: :delete, class: "bg-red-700 px-2 py-0 rounded-lg hover:bg-red-500 hover:text-white my-2" %></td>
+          <tr>
+            <td><%= food.name %></td>
+             <td><%= food.quantity %></td>
+            <td><%= food.measurement_unit %></td>
+            <td>$<%= food.price %></td>
+            <td><%= button_to "Delete", food_path(food.id), method: :delete %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
-</div>

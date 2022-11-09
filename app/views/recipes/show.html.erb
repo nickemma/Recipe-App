@@ -37,7 +37,7 @@
 </div>
 
 
-<table>
+<table class='table'>
  <% if @recipe.recipe_foods.any? %>
     <thead>
         <tr>
@@ -54,7 +54,7 @@
       <td><%= food.quantity%></td>
       <td><%= food.quantity * food.food.price %></td>
       <td>
-        <%=link_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), data: {turbo_confirm: 'are you sure'}, method: :delete, class:"btn btn-outline-dark"%>
+        <%=link_to "Delete", recipe_recipe_foods_path(recipe_id: @recipe.id, id: food.id), data: {turbo_confirm: 'are you sure'}, method: :delete, class:"remove"%>
       </td>
     </tr>
     <%end%>
