@@ -123,14 +123,6 @@ h2 {
   cursor: pointer;
 }
 
-.actions input:hover {
-  background: coral;
-  border: none;
-  color: #fff;
-  transition: 0.5s ease-in-out;
-  transform: rotate(360deg);
-}
-
 .set {
   text-align: center;
   display: flex;
@@ -260,4 +252,110 @@ h2 {
   color: #6d7ae7;
   padding: 1rem 3rem;
   text-decoration: underline;
+}
+
+/* ========= Recipe ========  */
+
+.recipe {
+  margin-top: 10rem;
+  padding-left: 10rem;
+}
+
+.recipe .get {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  background: rgb(102, 102, 245);
+  color: #fff;
+  border-radius: 5rem;
+  padding: 1rem 3rem;
+}
+
+.recipe .get:hover {
+  background: #05138b;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.done h4 a {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.recipe .get a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-set input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  max-width: max-content;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+  resize: none;
+}
+
+.adding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.adding div {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.btn input {
+  font-size: 2rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.actions input:hover {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.done {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 50%;
+  padding: 1rem 1.5rem;
+}
+
+.done p {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: end;
+}
+
+.done .delete {
+  font-size: 1.5rem;
+  background: #6d7ae7;
+  padding: 0.5rem 1rem;
+  color: #fff;
 }

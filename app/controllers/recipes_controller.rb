@@ -4,10 +4,12 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.includes([:user]).where(user: current_user)
+
   end
 
   def show
     @recipe = Recipe.find(params[:id])
+
     @recipe_foods = RecipeFood.includes([:food]).includes([:recipe]).where(recipe_id: params[:id])
   end
 
@@ -23,6 +25,7 @@ class RecipesController < ApplicationController
       flash[:notice] = 'Recipe saved successfully'
     else
       flash[:alert] = 'Recipe not saved'
+
     end
     redirect_to recipes_path
   end
@@ -32,5 +35,6 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :description, :cooking_time, :preparation_time, :public)
       .merge({ user_id: current_user.id })
+
   end
 end

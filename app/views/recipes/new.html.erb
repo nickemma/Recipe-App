@@ -1,0 +1,42 @@
+<div class="form-recipe">
+  <%= form_with model: @recipe do |form| %>
+    <% if @recipe.errors.any? %>
+      <div class='form-list'>
+        <h3><%= pluralize(@recipe.errors.count, "error") %> occurred: </h3>
+        <ul>
+          <%= @recipe.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h2>New Recipe</h2>
+    <div class='holder'>
+    <div class='form-set'>
+      <%= form.label :name, "Name" %>
+      <%= form.text_field :name, required: true, autofocus: true %>
+    </div>
+    <div class='form-set'>
+      <%= form.label :preparation_time, "Preparation Time" %>
+      <%= form.number_field :preparation_time, required: true, autofocus: true %>
+    </div>
+    <div class='form-set'>
+      <%= form.label :cooking_time, "Cooking Time" %>
+      <%= form.number_field :cooking_time, required: true, autofocus: true %>
+    </div>
+    <div class='form-set'>
+      <%= form.label :description, "Description" %>
+      <%= form.text_area :description, required: true, autofocus: true %>
+    </div>
+     </div>
+    <div class='adding'> 
+    <div>
+      <%= form.label :public%>
+      <%= form.check_box :public%>
+    </div>
+    <div class='btn'>
+      <%= form.submit 'Create Recipe'%>
+    </div>
+    </div>
+  <% end %>
+</div>
