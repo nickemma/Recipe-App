@@ -4,7 +4,6 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.includes([:user]).where(user: current_user)
-
   end
 
   def show
@@ -35,6 +34,5 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :description, :cooking_time, :preparation_time, :public)
       .merge({ user_id: current_user.id })
-
   end
 end
