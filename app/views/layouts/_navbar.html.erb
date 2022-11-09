@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class='nav-link'>
     <%= form_with url: root_path, method: :get do %>
-      <button class='logo'>Lazy</button>
+      <button class='logo'>LazyFood</button>
     <% end %>
     <% if current_user%>
       <%= form_with url: foods_path, method: :get do %>

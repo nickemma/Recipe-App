@@ -15,7 +15,7 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 
- Capybara.register_driver :selenium_chrome do |app|
+Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
@@ -33,7 +33,7 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
-   config.before(:suite) do
+  config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
 
