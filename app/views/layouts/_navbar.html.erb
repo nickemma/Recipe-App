@@ -5,10 +5,13 @@
     <% end %>
     <% if current_user%>
       <%= form_with url: foods_path, method: :get do %>
-        <button class='list'>Foods</button>
+        <button class='list'>Foods</button>|
       <% end %>
       <%= form_with url: recipes_path, method: :get do %>
-        <button class='list'>Recipes</button>
+        <button class='list'>Recipes</button> |
+      <% end %>
+      <%= form_with url: recipes_path, method: :get do %>
+        <button class='list'>Public Recipes</button>
       <% end %>
     <% end %>
   </div>

@@ -24,6 +24,16 @@ class FoodsController < ApplicationController
     end
   end
 
+   def general
+    @foods = []
+    current_user.recipes.map do |recipe|
+      recipe.recipe_foods.map do |recipe_food|
+        @foods << recipe_food.food unless @foods.include?(recipe_food.food)
+      end
+    end
+    @total = @foods.sum(&:price)
+  end
+
   def destroy
     @food = Food.find(params[:id])
     if @food.destroy
