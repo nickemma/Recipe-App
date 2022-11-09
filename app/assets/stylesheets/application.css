@@ -431,3 +431,45 @@ textarea {
   font-weight: lighter;
   margin-top: 1rem;
 }
+
+/* ========= Ingrdient =======  */
+
+.add-ing {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.new-label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label select,
+input {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  cursor: pointer;
+}
+
+.go-back {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: underline;
+  color: #fff;
+}
