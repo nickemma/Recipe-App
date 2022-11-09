@@ -10,10 +10,10 @@
       <%= form_with url: recipes_path, method: :get do %>
         <button class='list'>Recipes</button> |
       <% end %>
-      <%= form_with url: public_recipes_url, method: :get do %>
+      <%= form_with url: public_recipes_path, method: :get do %>
         <button class='list'>Public Recipes</button>|
       <% end %>
-      <%= form_with url:general_shopping_list_url, method: :get do %>
+      <%= form_with url:general_shopping_list_path, method: :get do %>
         <button class='list'>General Shopping List</button>
       <% end %>
     <% end %>
@@ -31,9 +31,6 @@
     <%=form_with model: User.new, url: destroy_user_session_path, data: { turbo_method: :delete },
 class:'sign-out' do %> 
       <button>Sign out</button>
-    <% end %>
-    <%=form_with model: User.new, url: destroy_user_session_path, method: :delete, class:'sign-out' do %> 
-      <button>Edit Profile</button>
     <% end %>
     <span class='alert'>
      <p>Welcome <%= current_user.name%></p>
