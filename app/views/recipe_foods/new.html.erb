@@ -6,7 +6,10 @@
     <%= f.select :food_id, current_user.foods.collect {|food| [food.name, food.id]}%>
     </div>
 
-   
+    <div class='new-label'>
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity, required: true, placeholder: '1',  min: 1 %>
+    </div>
 
     <div class='new-label'>
     <%= f.submit "Create Recipe_Food" %>
