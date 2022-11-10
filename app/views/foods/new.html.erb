@@ -1,0 +1,34 @@
+<h2 class="heading">Add Food</h2>
+<div class='formed'>
+<%= form_with  model: @food, class:"input-form"  do |f|%>
+    <div class="form-div" >
+    <div>
+    <%= f.label :name%><br>
+    <%= f.text_field :name, class:"form-control",  required: true, id:"name"%><br>
+    </div>
+
+    <div>
+    <%= f.label :quantity%><br>
+    <%= f.number_field :quantity, class:"form-control",  required: true, id:"quantity"%><br>
+    </div>
+
+    <div>
+    <%= f.label :measurement_unit %><br>
+    <%= f.text_field :measurement_unit,  class:"form-control" , required: true, id:"measurement"%><br>
+    </div>
+
+    <div>
+    <%= f.label :price, class:"form-label" %><br>
+    <%= f.number_field :price ,  class:"form-control" , required: true, id:"price"%><br>
+    </div>
+
+    </div>
+    <div>
+    <%= f.submit "Create Food", class:"btn-create" %>
+    </div>
+ <% end %>
+<div class="form-div" >
+  <div>
+      <%=link_to 'Back', foods_path, class:"btn-back"%>
+  </div>
+</div>

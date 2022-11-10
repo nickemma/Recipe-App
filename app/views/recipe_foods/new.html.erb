@@ -1,0 +1,21 @@
+<h2 class="heading">Add Recipe Food</h2>
+<div class='add-ing'>
+<%= form_with url: recipe_recipe_foods_path, scope: :recipe_food do |f| %>
+    <div class='new-label'>
+    <%= f.label :food %><br>
+    <%= f.select :food_id, current_user.foods.collect {|food| [food.name, food.id]}%>
+    </div>
+
+    <div class='new-label'>
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity, required: true, placeholder: '1',  min: 1 %>
+    </div>
+
+    <div class='new-label'>
+    <%= f.submit "Create Recipe_Food" %>
+    </div>
+<% end %>
+  <div class='go-back'>
+    <%=link_to 'Back', foods_path %>
+  </div>
+</div>

@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 400ms ease;
+  list-style: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  font-size: 62.5%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(252, 247, 247);
+  z-index: 100;
+  padding: 2rem 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link .list {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.navbar .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.log button {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.log:hover button {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: translateY(-0.5rem);
+}
+
+h2 {
+  margin-top: 8rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.new_user {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 50rem;
+  padding: 2rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  width: 20%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.set {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.sign-out {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.alert {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ========= Food ========  */
+
+.food-section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 3rem auto;
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.tab {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.table thead th,
+.table tbody td {
+  border-bottom: 1px solid gainsboro;
+}
+
+.table thead th {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  border-right: 1px solid gainsboro;
+}
+
+.table tbody td {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bolder;
+  border-right: 1px solid gainsboro;
+}
+
+.btn-div .btn-add {
+  font-size: 2rem;
+  margin-left: 80rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 3rem;
+  text-align: left;
+}
+
+.btn-div .btn-add:hover {
+  background: rgb(102, 102, 245);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.formed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.form-div .form-control {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-create {
+  font-size: 2rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.btn-create:hover {
+  background: rgb(102, 102, 245);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-back {
+  font-size: 2rem;
+  color: #6d7ae7;
+  padding: 1rem 3rem;
+  text-decoration: underline;
+}
+
+/* ========= Recipe ========  */
+
+.recipe {
+  margin-top: 10rem;
+  padding-left: 10rem;
+}
+
+.play a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #333;
+}
+
+.recipe .get {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  background: rgb(102, 102, 245);
+  color: #fff;
+  border-radius: 5rem;
+  padding: 1rem 3rem;
+}
+
+.recipe .get:hover {
+  background: #05138b;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.done h4 a {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.recipe .get a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-set input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  max-width: max-content;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+  resize: none;
+}
+
+.adding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.adding div {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.btn input {
+  font-size: 2rem;
+  background: rgb(151, 151, 233);
+  color: #fff;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.new-label input {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  cursor: pointer;
+}
+
+.actions input:hover {
+  background: coral;
+  border: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.done {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 80%;
+  padding: 1rem 1.5rem;
+}
+
+.done p {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: end;
+}
+
+.done .delete {
+  font-size: 1.5rem;
+  background: #6d7ae7;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+/* ====== Recipe Details =======  */
+
+.recipe-detail {
+  margin: 8rem 25%;
+}
+
+.recipe-detail h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.details .form-check {
+  text-align: end;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.details .time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.time p {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+
+.time span {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.details .res {
+  background: gainsboro;
+  font-size: 2rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.details .shop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.shop-list .check-list {
+  border: 1px solid gainsboro;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+
+.shop-list .check-list a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.shop-list .check-list:hover {
+  background: gainsboro;
+}
+
+.details hr {
+  border: 1px solid;
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+
+/* ========= Ingrdient =======  */
+
+.add-ing {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.new-label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label label {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.new-label select {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  cursor: pointer;
+}
+
+.go-back {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ========= Public  ========  */
+
+.total {
+  margin: 10rem 25%;
+}
+
+.link {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.play span {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(58, 58, 58);
+}
+
+.nice {
+  margin: 10rem 25%;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nice .awesome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.awesome .rest span {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #333;
+}
