@@ -12,7 +12,11 @@
       <% end %>
       <%= form_with url: public_recipes_path, method: :get do %>
         <button class='list'>Public Recipes</button>|
-      
+      <% end %>
+      <%= form_with url:general_shopping_list_path, method: :get do %>
+        <button class='list'>General Shopping List</button>
+      <% end %>
+    <% end %>
   </div>
   <div class='nav-list'>
     <% unless current_user%>
