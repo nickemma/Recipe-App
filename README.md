@@ -90,11 +90,6 @@ For you to see the styling being applied in the browser during development
 - Twitter: [@techieEmma](https://twitter.com/techieEmma)
 - LinkedIn: [@Nicholas Emmanuel](https://www.linkedin.com/in/techieemma/)
 
-👤 **Adebowale Adebgoye**
-
-- GitHub: [@githubhandle](https://github.com/ademibowale)
-- Twitter: [@twitterhandle](https://twitter.com/Ademibowale1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/adebowale-adegboye-143568221/)
 
 ## 🤝 Contributing
 
