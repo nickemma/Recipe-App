@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, sign_out_via: [:get]
+  devise_for :users
   # resources :users
     resources :foods, except: [:edit, :update]
     resources :recipes, only: [:index, :show, :new, :create, :destroy] do 
